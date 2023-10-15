@@ -1,0 +1,243 @@
+.right,.left{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem 0;
+  height: 100vh;
+}
+.left{
+  height: 96vh;
+  padding: 4vh 3% 0 3%;
+  width: 64%;
+  background: #f8f7f1;
+}
+.left header{
+  display: flex;
+  justify-content: space-between;
+}
+.left header p{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem 0;
+}
+.left header strong,.left .userBox header h4,.right header p h3{
+  font-size: 1.3rem;
+}
+
+.left .top_box{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.left .top_box .box{
+  width: 180px;
+  padding: 20px;
+  height: 130px;
+  position: relative;
+  border-radius: 40px;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  color: rgb(49, 49, 49);
+  justify-content: space-between;
+}
+
+.left .top_box .box div{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  gap: 0 0.3rem;
+}
+.left .top_box .box div p{
+  display: flex;
+  align-items: center;
+  gap: 0 0.5rem;
+}
+.left .top_box .box div p i{
+  border-radius: 5px;
+}
+.left .top_box .box div p span{
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.left .top_box .box div small{
+  padding: 5px 3px;
+  color: #839770;
+  border-radius: 5px;
+}
+.left .top_box .box strong{
+  font-size: 2rem;
+}
+.left .top_box .box section{
+  display: flex;
+  gap: 0.5rem 0;
+  text-align: center;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+}
+.left .top_box .box section button{
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+.left .top_box .box .tag{
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  border-radius: 50%;
+  background: #9a9ff1;
+}
+.left .top_box .box .tag:nth-child(1){
+  top: -40px;
+  left: -40px;
+}
+.left .top_box .box .tag:nth-child(3){
+  bottom: -40px;
+  right: -40px;
+}
+
+.left .userBox{
+  display: flex;
+  margin: 5vh 0 0 0;
+  flex-direction: column;
+  overflow-y: auto;
+  gap: 1rem 0;
+}
+.left .userBox .head{
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem 0;
+}
+.left .userBox .head p{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.left .userBox .head p strong{
+  font-size: 1.8rem;
+}
+
+
+.right{
+  width: 30%;
+  padding: 0 0;
+  height: 100vh;
+  background: #f1eee3;
+}
+.right header{
+  width: 82%;
+  padding: 4vh 9%;
+  background: white;
+}
+.right header p{
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem 0;
+}
+.right header p h3{
+  font-size: 1.3rem;
+}
+
+.salesChartBox{
+  display: flex;
+  gap: 0 0.5rem;
+  align-items: center;
+}
+.salesChartCanvas{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.salesChartCanvas span{
+  position: absolute;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.salesChartBox legend{
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem 0;
+}
+.salesChartBox legend div{
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem 0;
+}
+.salesChartBox legend article, .salesChartBox legend article p{
+  height: 4px;
+  border-radius: 20px;
+}
+.salesChartBox legend article{
+  width: 60px;
+  background: whitesmoke;
+}
+.salesChartBox legend article p{
+  width: 30px;
+  background: black;
+}
+
+
+.salesBox{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 2vh 10%;
+}
+
+
+@media all and (max-width:1050px){
+  .main{
+    flex-direction: column;
+  }
+  .left{
+    width: 94%;
+    height: auto;
+  }
+  .left header{
+    justify-content: center;
+  }
+  .left header p{
+    border-bottom: 2px dotted darkgray;
+    width: 90%;
+    padding: 10px 0;
+    align-items: center;
+  }
+  .right{
+    width: 100%;
+    height: auto;
+  }
+  .right header{
+    justify-content: center;
+    align-items: center;
+  }
+  .right header p:nth-child(1) {
+    border-bottom: 2px dotted darkgray;
+    align-items: center;
+  }
+  .salesChartBox{
+    justify-content: center;
+  }
+  .salesBox{
+    width: 90%;
+    padding: 2vh 5%;
+    align-items: center;
+  }
+  .salesBox strong{
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 2px dotted darkgray;
+  }
+}
+@media all and (max-width:800px){
+  .left .top_box{
+    gap: 2rem 0;
+    justify-content: space-around;
+  }
+}

@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Commissioner&family=Martel+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --secondary: #2c2c2c;
+    --theme : rgb(24, 225, 124);
+    --farm : #c6d0bc;
+    --trade : #f6d78b;
+    --produce : #a3a7fc;
+}
+
+
+body {
+    overflow-x: hidden;
+    background: whitesmoke;
+}
+
+.page {
+    width: 100%;
+    display: flex;
+    overflow-x: hidden;
+}
+
+section::-webkit-scrollbar,
+div::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 50px;
+    background: #2c2c2c;
+}
+
+section::-webkit-scrollbar-thumb,
+div::-webkit-scrollbar-thumb {
+    width: 5px;
+    border-radius: 50px;
+    background: wheat;
+}
+
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.616);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader img{
+    animation: glow 0.8s ease infinite;
+}
+
+@keyframes glow{
+    0%{scale: 0.5;}
+    100%{scale: 1;}
+}
+
+.sales {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 2vh 0;
+    gap: 0.8rem;
+}
+
+.sale {
+    background: white;
+    width: 95%;
+    padding: 10px 2.5%;
+    display: grid;
+    grid-template-columns: 1.5fr repeat(2, 1fr);
+    align-items: center;
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
+}
+
+
+.sale article {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.sale article button{
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: var(--theme);
+    cursor: pointer;
+}
+
+.sale strong {
+    font-size: 2rem;
+}
+
+.sale p {
+    display: flex;
+    flex-direction: column;
+}
+
+.sale p span {
+    font-weight: 600;
+}
+
+.sale p small {
+    color: darkgray;
+}
+
+@media all and (max-width:700px) {
+    .sale{
+        gap: 0.5rem;
+        grid-template-columns: 1.5fr 1fr;
+    }
+    .sale article{
+        gap: 0.3rem;
+        justify-content: flex-start;
+    }
+    .sale article span{
+        display: none;
+    }
+}
+@media all and (max-width:450px) {
+    .sale {
+        gap: 0.5rem 0;
+    }
+
+    .sale p:nth-child(3) {
+        display: none;
+    }
+}

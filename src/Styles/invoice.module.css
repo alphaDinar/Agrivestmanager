@@ -1,0 +1,49 @@
+.left{
+  width: 90%;
+  height: 90vh;
+  padding: 5vh 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem 0;
+  transition: 0.4s ease;
+}
+
+.left header{
+  display: flex;
+  align-items: center;
+  padding: 1.5vh 0;
+  justify-content: space-between;
+  border-bottom: 2px dotted darkgray;
+}
+.left header select{
+  height: 30px;
+  padding: 5px 15px;
+}
+
+@media all and (max-width:1250px){
+  .main{
+    min-height: 90vh;
+  }
+  .left{
+    height: auto;
+  }
+  .left{
+    width: 90%;
+    padding: 5vh 5%;
+  }
+}
+
+@media all and (max-width:700px){
+  .main{
+    padding: 5vh 0;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
+@media all and (max-width:450px){
+  .left header{
+    gap: 1rem 0;
+    flex-direction: column;
+  }
+}

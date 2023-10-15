@@ -1,0 +1,128 @@
+.sideBar{
+  width: 16%;
+  height: 90vh;
+  padding: 5vh 2%;
+  position: fixed;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--secondary);
+  color: white;
+  overflow: visible;
+  transition: 0.4s ease;
+  text-align: center;
+  z-index: 100;
+}
+.sideBar.change{
+  width: 1%;
+}
+.sideBar.change h3{
+  font-size: 1rem;
+}
+.sideBar.change img{
+  width: 100%;
+  height: auto;
+}
+.sideBar.change header p span{
+  font-size: 1rem !important;
+}
+.sideBar.change a span{
+  display: none;
+}
+
+.sideBar button{
+  position: absolute;
+  width: 40px;
+  z-index: 1000;
+  height: 40px;
+  left: 100%;
+  background: var(--secondary);
+  color: wheat;
+  top: 0;
+  cursor: pointer;
+}
+
+.sideBar header{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem 0;
+  align-items: center;
+}
+.sideBar header h3{
+  font-size: 2rem;
+}
+.sideBar header img{
+  height: 100px;
+  width: 100px;
+}
+.sideBar header p{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem 0;
+}
+
+.sideBar nav{
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem 0;
+}
+.sideBar nav a{
+  color: white;
+  display: flex;
+  font-size: 1.1rem;
+  align-items: center;
+  gap: 0 0.5rem;
+}
+.sideBar nav a span{
+  font-size: 1.1rem;
+}
+.sideBar footer a{
+  display: flex;
+  align-items: center;
+  gap: 0 0.5rem;
+  font-size: 1.2rem;
+  color: wheat;
+}
+
+.divider{
+  width: 80%;
+  border-top: 2px solid white;
+  display: none;
+}
+
+@media all and (max-width:1250px){
+  .sideBar,.sideBar.change{
+    width: 250px;
+    padding: 5vh 20px;
+  }
+  .sideBar{
+    left: -290px;
+  }
+  .sideBar.change{
+    left: 0;
+  }
+  .sideBar.change h3{
+    font-size: 2rem;
+  }
+  .sideBar.change header img{
+    height: 80px;
+    width: 80px;
+  }
+  .sideBar.change header p span{
+    font-size: 1.3rem !important;
+  }
+  .sideBar.change a span{
+    display: flex;
+  }
+}
+@media all and (max-width:300px){
+  .sideBar,.sideBar.change{
+    width: 200px;
+    padding: 5vh 20px;
+  }
+  .sideBar{
+    left: -240px;
+  }
+}

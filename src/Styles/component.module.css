@@ -1,0 +1,14 @@
+.search_box{
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 5px  15px;
+  border-radius: 5px;
+  width: 250px;
+  height: 30px;
+  border-radius: 0 5px 5px 0;
+  gap: 0 0.5rem;
+}
+.search_box i{
+  color: darkgray;
+}

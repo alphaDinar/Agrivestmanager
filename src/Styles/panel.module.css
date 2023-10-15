@@ -1,0 +1,20 @@
+.page{
+  display: flex;
+  justify-content: flex-end;
+}
+main{
+  width: 80%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  transition: 0.4s ease;
+}
+main.change{
+  width: 95%;
+}
+
+@media all and (max-width:1250px){
+  main,main.change{
+    width: 100%;
+  }
+}
